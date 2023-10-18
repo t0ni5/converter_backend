@@ -2,6 +2,7 @@ import { DataSource, DataSourceOptions } from 'typeorm';
 import 'dotenv/config';
 
 export const dataSourceOptions: DataSourceOptions = {
+  url: process.env.POSTGRES_URL,
   type: 'postgres',
   host: process.env.POSTGRES_HOST as string,
   port: parseInt(process.env.POSTGRES_PORT as string, 10) || 5432,
